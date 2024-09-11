@@ -6,6 +6,7 @@ import Home from "./pages/Home"
 import NotFound from "./pages/NotFound"
 import ProtectedRoute from "./components/ProtectedRoute"
 import Navbar from "./components/Navbar"
+import Setup from "./pages/Setup"
 
 function Logout() {
   localStorage.clear()
@@ -21,6 +22,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/settings" element={<Setup />}/>
         <Route
           path="/home"
           element={
